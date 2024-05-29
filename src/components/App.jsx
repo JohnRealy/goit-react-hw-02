@@ -1,6 +1,7 @@
 import Description from "./Description/Description";
 import Options from "./Options/Options";
 import Feedback from "./Feedback/Feedback";
+import Notifications from "./Notifications/Notifications";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -44,7 +45,7 @@ export default function App() {
         resetFeedback={resetFeedback}
       />
       {totalFeedback === 0 ? (
-        "No feedback yet"
+        <Notifications />
       ) : (
         <Feedback feedback={feedback} totalFeedback={totalFeedback} />
       )}
